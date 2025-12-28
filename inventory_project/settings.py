@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-)f@kyq%55=rep-e&15@=^4c+k6_^w0-p6lc#2n3(wy&z6+h@-=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -132,3 +132,8 @@ REST_FRAMEWORK = {
         'django_filters.rest_framework.DjangoFilterBackend',
     ],
 }
+
+import os
+
+STATIC_URL = "/static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
